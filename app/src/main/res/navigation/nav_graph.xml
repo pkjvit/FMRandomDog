@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.pkj.learn.fmrandomdog.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_generateDogFragment"
+            app:destination="@id/generateDogFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_recentsDogFragment"
+            app:destination="@id/recentsDogFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/generateDogFragment"
+        android:name="com.pkj.learn.fmrandomdog.ui.generatedog.GenerateDogFragment"
+        android:label="@string/generate_dogs"
+        tools:layout="@layout/generate_dog_fragment" />
+    <fragment
+        android:id="@+id/recentsDogFragment"
+        android:name="com.pkj.learn.fmrandomdog.ui.recentsdog.RecentDogsFragment"
+        android:label="@string/my_recently_generated_dogs"
+        tools:layout="@layout/recents_dog_fragment" />
+</navigation>
