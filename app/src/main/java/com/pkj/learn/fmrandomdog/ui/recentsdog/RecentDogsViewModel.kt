@@ -3,20 +3,27 @@ package com.pkj.learn.fmrandomdog.ui.recentsdog
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.pkj.learn.fmrandomdog.dog.DogRepository
+import androidx.lifecycle.viewModelScope
+import com.pkj.learn.fmrandomdog.data.Dog
+import com.pkj.learn.fmrandomdog.data.source.DefaultDogRepository
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class RecentDogsViewModel @Inject constructor(private val repository: DogRepository) : ViewModel() {
+class RecentDogsViewModel @Inject constructor(private val repository: DefaultDogRepository) : ViewModel() {
 
-    private val _recentDogs: MutableLiveData<ArrayList<String>> = MutableLiveData()
-    val recentDogs: LiveData<ArrayList<String>> = _recentDogs
+    private var _recentDogs: MutableLiveData<List<Dog>> = MutableLiveData()
+    val recentDogs: LiveData<List<Dog>> = _recentDogs
 
     fun getRecentDogs(){
-        _recentDogs.value = repository.getRecentDogs()
+        viewModelScope.launch {
+            _recentDogs.value = repository.getRecentDogs()
+        }
     }
 
     fun clear(){
-        repository.clear()
+        viewModelScope.launch {
+            repository.clear()
+        }
         getRecentDogs()
     }
 }

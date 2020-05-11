@@ -70,6 +70,11 @@ dependencies {
     implementation deps.core_ktx
     implementation deps.fragment.runtime_ktx
 
+    //coroutine
+    implementation deps.coroutines.core
+    implementation deps.coroutines.android
+    testImplementation deps.coroutines.test
+
     //dagger
     implementation deps.dagger.runtime
     kapt deps.dagger.compiler

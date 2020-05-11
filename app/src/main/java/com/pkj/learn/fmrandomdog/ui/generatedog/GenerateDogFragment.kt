@@ -51,7 +51,7 @@ class GenerateDogFragment : Fragment() {
         viewModel.response.observe(viewLifecycleOwner, Observer {
             Glide
                 .with(requireContext())
-                .load(it.message)
+                .load(it.url)
                 .into(image)
         })
 
