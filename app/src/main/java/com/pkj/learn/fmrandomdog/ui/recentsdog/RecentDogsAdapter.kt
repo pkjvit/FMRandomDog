@@ -12,12 +12,13 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.pkj.learn.fmrandomdog.R
+import com.pkj.learn.fmrandomdog.data.Dog
 import kotlinx.android.synthetic.main.layout_item_recent_dog.view.*
 
 /**
  * @author Pankaj Jangid
  */
-class RecentDogsAdapter: ListAdapter<String, DogViewHolder>(DogItemDiffCallback()) {
+class RecentDogsAdapter: ListAdapter<Dog, DogViewHolder>(DogItemDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DogViewHolder {
         return DogViewHolder(LayoutInflater.from(parent.context)
@@ -32,21 +33,21 @@ class RecentDogsAdapter: ListAdapter<String, DogViewHolder>(DogItemDiffCallback(
 
 class DogViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-    fun bind(url: String){
+    fun bind(dog: Dog){
         Glide
             .with(itemView.context)
-            .load(url)
+            .load(dog.url)
             .into(itemView.image)
     }
 
 }
 
-class DogItemDiffCallback : ItemCallback<String>(){
-    override fun areItemsTheSame(oldItem: String,
-                                 newItem: String): Boolean = oldItem == newItem
+class DogItemDiffCallback : ItemCallback<Dog>(){
+    override fun areItemsTheSame(oldItem: Dog,
+                                 newItem: Dog): Boolean = oldItem.url == newItem.url
 
-    override fun areContentsTheSame(oldItem: String,
-                                    newItem: String): Boolean = oldItem == newItem
+    override fun areContentsTheSame(oldItem: Dog,
+                                    newItem: Dog): Boolean = oldItem == newItem
 
 }
 

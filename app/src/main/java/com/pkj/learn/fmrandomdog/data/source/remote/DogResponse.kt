@@ -1,4 +1,4 @@
-package com.pkj.learn.fmrandomdog.dog
+package com.pkj.learn.fmrandomdog.data.source.remote
 
 /**
  * @author Pankaj Jangid
