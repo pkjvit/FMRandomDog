@@ -5,14 +5,13 @@ Generate random dogs and show 20 most recent generated dogs persist through out 
 ## Learning
 
 ### Kotlin
-- coroutines
-- kotlin handson
+- Coroutines
+- Kotlin handson
 
 ### Android Jetpack
 - Room
 - Navigation
 - ViewModel
-- 
 
 ### Others
 - Dagger (DI)
