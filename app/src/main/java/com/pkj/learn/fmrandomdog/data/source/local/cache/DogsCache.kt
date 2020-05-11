@@ -14,7 +14,7 @@ import javax.inject.Singleton
 class DogsCache @Inject constructor() : Cache {
 
     companion object {
-        const val CACHE_SIZE = 4
+        const val CACHE_SIZE = 20
     }
 
     private val lruCache : LruCache<String, Dog> = LruCache(Companion.CACHE_SIZE)
