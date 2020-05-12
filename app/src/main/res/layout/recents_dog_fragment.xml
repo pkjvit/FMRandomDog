@@ -22,7 +22,8 @@
         tools:itemCount="5"
         tools:listitem="@layout/layout_item_recent_dog" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="@style/Button"
         android:id="@+id/clear_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

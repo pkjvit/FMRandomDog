@@ -5,4 +5,5 @@
     <dimen name="margin_regular">16dp</dimen>
     <dimen name="margin_large">20dp</dimen>
     <dimen name="margin_extra_large">24dp</dimen>
+    <dimen name="button_corner_radius">24dp</dimen>
 </resources>
