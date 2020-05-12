@@ -1,6 +1,5 @@
 package com.pkj.learn.fmrandomdog.data.source.local
 
-import androidx.lifecycle.LiveData
 import com.pkj.learn.fmrandomdog.data.Dog
 import com.pkj.learn.fmrandomdog.data.source.local.cache.Cache
 import com.pkj.learn.fmrandomdog.data.source.local.cache.DogsCache

@@ -1,6 +1,5 @@
 package com.pkj.learn.fmrandomdog.data.source.remote
 
-import io.reactivex.Single
 import javax.inject.Inject
 
 /**

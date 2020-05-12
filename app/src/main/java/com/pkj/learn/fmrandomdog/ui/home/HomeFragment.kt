@@ -1,14 +1,14 @@
 package com.pkj.learn.fmrandomdog.ui.home
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-
 import com.pkj.learn.fmrandomdog.R
+import kotlinx.android.synthetic.main.home_fragment.*
 
 class HomeFragment : Fragment() {
 
@@ -21,8 +21,8 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<Button>(R.id.recents_dog_btn).setOnClickListener { openRecentDogsScreen() }
-        view.findViewById<Button>(R.id.generate_btn).setOnClickListener { openGenerateDogScreen() }
+        recents_dog_btn.setOnClickListener { openRecentDogsScreen() }
+        generate_btn.setOnClickListener { openGenerateDogScreen() }
     }
 
     private fun openGenerateDogScreen(){

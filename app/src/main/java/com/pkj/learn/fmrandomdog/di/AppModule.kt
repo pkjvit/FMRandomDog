@@ -1,6 +1,5 @@
 package com.pkj.learn.fmrandomdog.di
 
-import android.app.Application
 import android.content.Context
 import androidx.room.Room
 import com.pkj.learn.fmrandomdog.data.source.local.DogsDao
@@ -8,8 +7,6 @@ import com.pkj.learn.fmrandomdog.data.source.local.DogsDatabase
 import com.pkj.learn.fmrandomdog.data.source.remote.DogApi
 import dagger.Module
 import dagger.Provides
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.Dispatchers
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory

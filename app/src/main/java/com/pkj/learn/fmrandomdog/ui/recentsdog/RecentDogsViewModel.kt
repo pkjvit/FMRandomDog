@@ -6,6 +6,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pkj.learn.fmrandomdog.data.Dog
 import com.pkj.learn.fmrandomdog.data.source.DefaultDogRepository
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -23,7 +25,7 @@ class RecentDogsViewModel @Inject constructor(private val repository: DefaultDog
     fun clear(){
         viewModelScope.launch {
             repository.clear()
+            _recentDogs.value = emptyList()
         }
-        getRecentDogs()
     }
 }

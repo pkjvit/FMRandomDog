@@ -19,23 +19,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="@style/Button"
         android:id="@+id/generate_btn"
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="openGenerateDogScreen"
         android:text="@string/generate_dogs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="@style/Button"
         android:id="@+id/recents_dog_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="openRecentDogsScreen"
         android:text="@string/my_recently_generated_dogs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
