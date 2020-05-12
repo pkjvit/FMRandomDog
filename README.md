@@ -2,7 +2,7 @@
 
 Generate random dogs and show 20 most recent generated dogs persist through out the app session with clear recent dogs functionality
 
-## Learning
+## Technology usages
 
 ### Kotlin
 - Coroutines
@@ -16,3 +16,4 @@ Generate random dogs and show 20 most recent generated dogs persist through out 
 ### Others
 - Dagger (DI)
 - Retrofit (Api consume)
+- MVVM pattern
