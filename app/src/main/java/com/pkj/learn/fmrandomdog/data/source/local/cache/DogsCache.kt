@@ -1,8 +1,6 @@
 package com.pkj.learn.fmrandomdog.data.source.local.cache
 
 import android.util.LruCache
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.pkj.learn.fmrandomdog.data.Dog
 import javax.inject.Inject
 import javax.inject.Singleton

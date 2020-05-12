@@ -1,6 +1,5 @@
 package com.pkj.learn.fmrandomdog.data.source.local
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.pkj.learn.fmrandomdog.data.Dog
 import com.pkj.learn.fmrandomdog.data.source.local.cache.DogsCache
@@ -10,9 +9,6 @@ import com.pkj.learn.fmrandomdog.data.source.local.cache.DogsCache
  */
 @Dao
 interface DogsDao {
-
-    @Query("SELECT * FROM Dogs")
-    suspend fun observeDogs(): List<Dog>
 
     @Query("SELECT * FROM Dogs ORDER BY id LIMIT ${DogsCache.CACHE_SIZE}")
     suspend fun getDogs(): List<Dog>
